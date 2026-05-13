@@ -1,0 +1,49 @@
+package com.gym.app.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.gym.app.model.enums.Role;
+import com.gym.app.model.enums.UserStatus;
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(exclude = {"password", "userProfile"})
+public class User {
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true)
+    private String emailAddress;
+
+    @Column
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    @Column
+    private Boolean verified;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private UserStatus userStatus;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "profile_id", referencedColumnName = "id")
+    private UserProfile userProfile;
+
+    @JsonIgnore
+    public String getPassword() {
+        return password;
+    }
+}
