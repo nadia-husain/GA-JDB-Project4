@@ -2,7 +2,7 @@ package com.gym.app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.gym.app.model.enums.ٍٍٍRole;
+import com.gym.app.model.enums.Role;
 import com.gym.app.model.enums.UserStatus;
 import jakarta.persistence.*;
 import lombok.*;

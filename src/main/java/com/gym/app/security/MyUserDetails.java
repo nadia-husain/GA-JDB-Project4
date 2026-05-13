@@ -1,6 +1,6 @@
-package com.ga.petadoption.security;
+package com.gym.app.security;
 
-import com.ga.petadoption.model.User;
+import com.gym.app.model.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

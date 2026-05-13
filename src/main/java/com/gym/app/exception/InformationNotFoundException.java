@@ -1,4 +1,4 @@
-package com.ga.petadoption.exception;
+package com.gym.app.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

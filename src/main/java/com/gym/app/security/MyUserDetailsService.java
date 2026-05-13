@@ -1,7 +1,7 @@
-package com.ga.petadoption.security;
+package com.gym.app.security;
 
-import com.ga.petadoption.model.User;
-import com.ga.petadoption.service.UserService;
+import com.gym.app.model.User;
+import com.gym.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

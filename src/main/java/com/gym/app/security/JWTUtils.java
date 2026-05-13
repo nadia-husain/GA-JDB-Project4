@@ -1,4 +1,4 @@
-package com.ga.petadoption.security;
+package com.gym.app.security;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
