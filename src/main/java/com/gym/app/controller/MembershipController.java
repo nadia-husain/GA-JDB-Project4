@@ -1,6 +1,5 @@
 package com.gym.app.controller;
 
-
 import com.gym.app.model.Membership;
 import com.gym.app.service.MembershipService;
 import org.springframework.beans.factory.annotation.Autowired;
