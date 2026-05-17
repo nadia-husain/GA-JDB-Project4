@@ -1,6 +1,7 @@
 package com.gym.app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.gym.app.model.enums.MembershipStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -31,7 +32,8 @@ public class Membership {
     private LocalDateTime endDate;
 
     @Column
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private MembershipStatus status;
 
     @CreationTimestamp
     @Column
