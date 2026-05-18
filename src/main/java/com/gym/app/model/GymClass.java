@@ -1,7 +1,7 @@
 package com.gym.app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.gym.app.model.enums.ClassStatus;
+import com.gym.app.model.enums.GymClassStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,12 +13,12 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "class")
+@Table(name = "gym_class")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Class {
+public class GymClass {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +35,7 @@ public class Class {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private ClassStatus status;
+    private GymClassStatus status;
 
     @CreationTimestamp
     @Column

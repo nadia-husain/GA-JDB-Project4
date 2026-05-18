@@ -1,5 +1,5 @@
 package com.gym.app.controller;
 
-public class ClassController {
+public class GymClassController {
 
 }
