@@ -1,6 +1,6 @@
 package com.gym.app.model.enums;
 
-public enum ClassStatus {
+public enum GymClassStatus {
     AVAILABLE,
     FULL,
     CANCELLED
